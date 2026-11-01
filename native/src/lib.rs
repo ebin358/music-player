@@ -14,6 +14,7 @@ mod ffi;
 mod pathfinder;
 mod remote;
 mod sink;
+mod stream;
 
 use jni::sys::{jint, JNI_VERSION_1_6};
 use jni::JavaVM;
@@ -45,6 +46,16 @@ pub extern "system" fn JNI_OnLoad(vm: JavaVM, _reserved: *mut c_void) -> jint {
                         .build(),
                 ),
         );
+    }
+
+    #[cfg(not(target_os = "android"))]
+    {
+        let _ = env_logger::Builder::new()
+            .filter_level(log::LevelFilter::Info)
+            .filter_module("symphonia_bundle_mp3", log::LevelFilter::Error)
+            .filter_module("symphonia_core", log::LevelFilter::Error)
+            .parse_env("SQUARE_LOG")
+            .try_init();
     }
 
     // The context object itself is attached later from Kotlin via

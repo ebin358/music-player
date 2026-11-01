@@ -43,7 +43,12 @@ base64 = "0.22"
 futures-util = "0.3"
 # Decoding the DJ's lines, which arrive as MP3; see src/dj.rs. The same
 # version librespot-playback already builds, so nothing new is compiled.
-symphonia = { version = "0.5", default-features = false, features = ["mp3"] }
+symphonia = { version = "0.5", default-features = false, features = ["mp3", "aac", "isomp4", "flac", "vorbis", "ogg", "wav", "pcm"] }
+# Desktop: fetching YouTube Music's AAC streams in ranges; see src/stream.rs.
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "rustls-tls-webpki-roots"] }
+
+[target.'cfg(not(target_os = "android"))'.dependencies]
+env_logger = { version = "0.11", default-features = false, features = ["auto-color"] }
 
 [target.'cfg(target_os = "android")'.dependencies]
 ndk-context = "0.1"
