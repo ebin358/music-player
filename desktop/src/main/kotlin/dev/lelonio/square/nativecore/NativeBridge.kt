@@ -260,7 +260,7 @@ object NativeBridge {
         // done trying, and a try that got nowhere is not offline by the
         // engine's own flag; read that way, a failed reconnection declared the
         // session back.
-        dev.lelonio.square.playback.OfflineMode.setNoSession(isOffline || !isConnected)
+        // The Android app records offline state here; the Mac app reads isConnected directly.
     }
 
     // --- The account's other devices ---
