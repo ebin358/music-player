@@ -70,8 +70,9 @@ jobs:
           APP=$(find desktop/build/compose/binaries -name 'Square.app' -maxdepth 4 | head -1)
           echo "app: $APP"
           # An AAC file made by macOS itself, for when YouTube will not stream to a CI address.
-          say -o "$RUNNER_TEMP/t.aiff" "Square for Mac self test. One, two, three, four, five."
-          afconvert -f m4af -d aac -b 128000 "$RUNNER_TEMP/t.aiff" "$RUNNER_TEMP/t.m4a"
+          python3 -c "import wave,struct,math; w=wave.open('$RUNNER_TEMP/t.wav','wb'); w.setnchannels(2); w.setsampwidth(2); w.setframerate(44100); w.writeframes(b''.join(struct.pack('<hh',v,v) for v in (int(9000*math.sin(2*math.pi*440*i/44100)) for i in range(44100*6)))); w.close()" \
+            && afconvert -f m4af -d aac -b 128000 "$RUNNER_TEMP/t.wav" "$RUNNER_TEMP/t.m4a" \
+            || echo "could not make the test file" | tee selftest.log
           SQUARE_TEST_FILE="$RUNNER_TEMP/t.m4a" "$APP/Contents/MacOS/Square" --selftest 2>&1 | tee selftest.log
 
       - name: Publish the .dmg
