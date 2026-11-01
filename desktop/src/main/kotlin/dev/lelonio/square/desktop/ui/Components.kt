@@ -121,7 +121,7 @@ fun Message(title: String, body: String? = null, modifier: Modifier = Modifier, 
     ) {
         Text(title, style = MaterialTheme.typography.titleMedium)
         body?.let { Text(it, style = MaterialTheme.typography.bodyMedium, color = SquareColors.InkSoft) }
-        action?.let { (label, onClick) -> TextButton(onClick = onClick) { Text(label, color = SquareColors.AccentSoft) } }
+        action?.let { (label, onClick) -> TextButton(onClick = { onClick() }) { Text(label, color = SquareColors.AccentSoft) } }
     }
 }
 
