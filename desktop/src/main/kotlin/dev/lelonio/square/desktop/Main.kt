@@ -51,7 +51,7 @@ fun main(args: Array<String>) {
             title = "Square",
             onKeyEvent = { e ->
                 // Space toggles playback when nothing else (a text field) took it.
-                if (e.type == KeyEventType.KeyUp && e.key == Key.Spacebar) {
+                if (e.type == KeyEventType.KeyDown && e.key == Key.Spacebar) {
                     player.toggle()
                     true
                 } else if (e.type == KeyEventType.KeyDown && e.key == Key.Escape && (app.nowPlayingOpen || app.canGoBack)) {

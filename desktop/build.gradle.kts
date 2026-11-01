@@ -79,6 +79,12 @@ compose.desktop {
                 "jdk.crypto.ec",
                 "jdk.unsupported",
                 "jdk.httpserver",
+                "java.xml",
+                "java.scripting",
+                "jdk.zipfs",
+                "jdk.charsets",
+                "jdk.localedata",
+                "jdk.accessibility",
             )
             macOS {
                 bundleID = "dev.lelonio.square.desktop"
