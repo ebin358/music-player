@@ -1,0 +1,60 @@
+=== errors ===
+
+=== tail ===
+Downloading https://services.gradle.org/distributions/gradle-9.3.0-bin.zip
+.............10%.............20%.............30%.............40%.............50%.............60%.............70%.............80%.............90%.............100%
+
+Welcome to Gradle 9.3.0!
+
+Here are the highlights of this release:
+ - Test reporting improvements
+ - Error and warning improvements
+ - Build authoring improvements
+
+For more details see https://docs.gradle.org/9.3.0/release-notes.html
+
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.3.0/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :checkRuntime
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :convertXmlValueResourcesForMain NO-SOURCE
+> Task :copyNonXmlValueResourcesForMain NO-SOURCE
+> Task :prepareComposeResourcesTaskForMain NO-SOURCE
+> Task :generateResourceAccessorsForMain NO-SOURCE
+> Task :generateActualResourceCollectorsForMain
+> Task :generateComposeResClass
+> Task :assembleMainResources
+> Task :processResources
+> Task :createRuntimeImage
+> Task :prepareAppResources
+> Task :unpackDefaultComposeDesktopJvmApplicationResources
+> Task :compileKotlin
+w: file:///Users/runner/work/music-player/music-player/desktop/src/main/kotlin/dev/lelonio/square/desktop/SelfTest.kt:61:48 Unnecessary non-null assertion (!!) on a non-null receiver of type 'SongItem'.
+w: file:///Users/runner/work/music-player/music-player/desktop/src/main/kotlin/dev/lelonio/square/desktop/SelfTest.kt:61:66 Unnecessary non-null assertion (!!) on a non-null receiver of type 'SongItem'.
+w: file:///Users/runner/work/music-player/music-player/desktop/src/main/kotlin/dev/lelonio/square/desktop/SelfTest.kt:61:110 Unnecessary non-null assertion (!!) on a non-null receiver of type 'SongItem'.
+w: file:///Users/runner/work/music-player/music-player/desktop/src/main/kotlin/dev/lelonio/square/desktop/lyrics/LyricsService.kt:97:61 Unnecessary safe call on a non-null receiver of type 'ResponseBody'.
+w: file:///Users/runner/work/music-player/music-player/desktop/src/main/kotlin/dev/lelonio/square/desktop/spotify/Pathfinder.kt:31:29 Unnecessary non-null assertion (!!) on a non-null receiver of type 'ResponseBody'.
+w: file:///Users/runner/work/music-player/music-player/desktop/src/main/kotlin/dev/lelonio/square/desktop/spotify/SpotifyAuth.kt:126:37 Unnecessary safe call on a non-null receiver of type 'ResponseBody'.
+w: file:///Users/runner/work/music-player/music-player/desktop/src/main/kotlin/dev/lelonio/square/desktop/ui/Components.kt:270:43 'val Icons.Rounded.QueueMusic: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Rounded.QueueMusic.
+w: file:///Users/runner/work/music-player/music-player/desktop/src/main/kotlin/dev/lelonio/square/desktop/youtube/NewPipeDownloader.kt:33:30 Unnecessary safe call on a non-null receiver of type 'ResponseBody'.
+w: file:///Users/runner/work/music-player/music-player/innertube/src/main/kotlin/com/metrolist/innertube/YouTube.kt:2579:103 Unnecessary safe call on a non-null receiver of type 'List<MusicCarouselShelfRenderer.Content>'.
+w: file:///Users/runner/work/music-player/music-player/innertube/src/main/kotlin/com/metrolist/innertube/YouTube.kt:2606:109 Unnecessary safe call on a non-null receiver of type 'List<MusicShelfRenderer.Content>'.
+w: file:///Users/runner/work/music-player/music-player/innertube/src/main/kotlin/com/metrolist/innertube/YouTube.kt:2628:131 Unnecessary safe call on a non-null receiver of type 'List<MusicCarouselShelfRenderer.Content>'.
+w: file:///Users/runner/work/music-player/music-player/innertube/src/main/kotlin/com/metrolist/innertube/YouTube.kt:2707:38 Unnecessary safe call on a non-null receiver of type 'List<MusicCarouselShelfRenderer.Content>'.
+w: file:///Users/runner/work/music-player/music-player/innertube/src/main/kotlin/com/metrolist/innertube/YouTube.kt:3394:25 Redundant creation of Json format. Creating instances for each usage can be slow.
+w: file:///Users/runner/work/music-player/music-player/innertube/src/main/kotlin/com/metrolist/innertube/pages/ArtistItemsPage.kt:118:63 Unnecessary safe call on a non-null receiver of type 'Runs'.
+
+> Task :compileJava NO-SOURCE
+> Task :classes
+> Task :jar
+
+> Task :createDistributable
+The distribution is written to /Users/runner/work/music-player/music-player/desktop/build/compose/binaries/main/app
+
+> Task :packageDmg
+The distribution is written to /Users/runner/work/music-player/music-player/desktop/build/compose/binaries/main/dmg/Square-1.0.0.dmg
+gradle/actions: Writing build results to /Users/runner/work/_temp/.gradle-actions/build-results/app-1793501934954.json
+
+BUILD SUCCESSFUL in 2m 38s
+12 actionable tasks: 12 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.3.0/userguide/configuration_cache_enabling.html

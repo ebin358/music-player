@@ -1,0 +1,253 @@
+=== errors ===
+
+=== tail ===
+[1m[92m   Compiling[0m cpufeatures v0.2.17
+[1m[92m   Compiling[0m tower-service v0.3.3
+[1m[92m   Compiling[0m try-lock v0.2.5
+[1m[92m   Compiling[0m bytemuck v1.25.2
+[1m[92m   Compiling[0m arrayvec v0.7.8
+[1m[92m   Compiling[0m atomic-waker v1.1.2
+[1m[92m   Compiling[0m rustls v0.23.43
+[1m[92m   Compiling[0m symphonia-core v0.5.5
+[1m[92m   Compiling[0m h2 v0.4.15
+[1m[92m   Compiling[0m want v0.3.1
+[1m[92m   Compiling[0m darling v0.20.11
+[1m[92m   Compiling[0m rustls-webpki v0.103.13
+[1m[92m   Compiling[0m futures-channel v0.3.33
+[1m[92m   Compiling[0m webpki-roots v1.0.9
+[1m[92m   Compiling[0m rustix v0.38.44
+[1m[92m   Compiling[0m base64 v0.22.1
+[1m[92m   Compiling[0m hyper v1.11.0
+[1m[92m   Compiling[0m icu_properties v2.2.0
+[1m[92m   Compiling[0m icu_normalizer v2.2.0
+[1m[92m   Compiling[0m system-configuration v0.7.0
+[1m[92m   Compiling[0m derive_builder_core v0.20.2
+[1m[92m   Compiling[0m rand_core v0.6.4
+[1m[92m   Compiling[0m ipnet v2.12.0
+[1m[92m   Compiling[0m aho-corasick v1.1.4
+[1m[92m   Compiling[0m hyper-util v0.1.20
+[1m[92m   Compiling[0m derive_builder_macro v0.20.2
+[1m[92m   Compiling[0m idna_adapter v1.2.2
+[1m[92m   Compiling[0m protobuf-support v3.7.2
+[1m[92m   Compiling[0m form_urlencoded v1.2.2
+[1m[92m   Compiling[0m vergen-lib v0.1.6
+[1m[92m   Compiling[0m encoding_rs v0.8.35
+[1m[92m   Compiling[0m regex-syntax v0.8.11
+[1m[92m   Compiling[0m home v0.5.12
+[1m[92m   Compiling[0m fastrand v2.5.0
+[1m[92m   Compiling[0m base64ct v1.8.3
+[1m[92m   Compiling[0m either v1.17.0
+[1m[92m   Compiling[0m pem-rfc7468 v0.7.0
+[1m[92m   Compiling[0m regex-automata v0.4.16
+[1m[92m   Compiling[0m which v4.4.2
+[1m[92m   Compiling[0m tempfile v3.27.0
+[1m[92m   Compiling[0m symphonia-metadata v0.5.5
+[1m[92m   Compiling[0m idna v1.1.0
+[1m[92m   Compiling[0m rand_core v0.9.5
+[1m[92m   Compiling[0m derive_builder v0.20.2
+[1m[92m   Compiling[0m tokio-rustls v0.26.4
+[1m[92m   Compiling[0m rand_chacha v0.3.1
+[1m[92m   Compiling[0m vergen v9.0.6
+[1m[92m   Compiling[0m sync_wrapper v1.0.2
+[1m[92m   Compiling[0m num_threads v0.1.7
+[1m[92m   Compiling[0m rustls v0.22.4
+[1m[92m   Compiling[0m time-core v0.1.9
+[1m[92m   Compiling[0m deranged v0.5.8
+[1m[92m   Compiling[0m zmij v1.0.23
+[1m[92m   Compiling[0m thiserror v2.0.19
+[1m[92m   Compiling[0m tower-layer v0.3.3
+[1m[92m   Compiling[0m powerfmt v0.2.0
+[1m[92m   Compiling[0m num-conv v0.2.2
+[1m[92m   Compiling[0m tower v0.5.3
+[1m[92m   Compiling[0m time v0.3.54
+[1m[92m   Compiling[0m protobuf-parse v3.7.2
+[1m[92m   Compiling[0m rand v0.8.7
+[1m[92m   Compiling[0m rand_chacha v0.9.0
+[1m[92m   Compiling[0m url v2.5.8
+[1m[92m   Compiling[0m regex v1.13.1
+[1m[92m   Compiling[0m der v0.7.10
+[1m[92m   Compiling[0m sha1 v0.10.7
+[1m[92m   Compiling[0m num-integer v0.1.46
+[1m[92m   Compiling[0m vergen-gitcl v1.0.8
+[1m[92m   Compiling[0m security-framework-sys v2.17.0
+[1m[92m   Compiling[0m rustls-webpki v0.102.8
+[1m[92m   Compiling[0m thiserror-impl v2.0.19
+[1m[92m   Compiling[0m serde_json v1.0.151
+[1m[92m   Compiling[0m parking_lot_core v0.9.12
+[1m[92m   Compiling[0m scopeguard v1.2.0
+[1m[92m   Compiling[0m ryu v1.0.23
+[1m[92m   Compiling[0m serde_urlencoded v0.7.1
+[1m[92m   Compiling[0m lock_api v0.4.14
+[1m[92m   Compiling[0m security-framework v2.11.1
+[1m[92m   Compiling[0m spki v0.7.3
+[1m[92m   Compiling[0m tower-http v0.6.11
+[1m[92m   Compiling[0m protobuf-codegen v3.7.2
+[1m[92m   Compiling[0m rand v0.9.5
+[1m[92m   Compiling[0m hyper-rustls v0.27.9
+[1m[92m   Compiling[0m webpki-roots v0.26.11
+[1m[92m   Compiling[0m http-body-util v0.1.4
+[1m[92m   Compiling[0m iana-time-zone v0.1.65
+[1m[92m   Compiling[0m rustls-pemfile v2.2.0
+[1m[92m   Compiling[0m inout v0.1.4
+[1m[92m   Compiling[0m portable-atomic v1.14.0
+[1m[92m   Compiling[0m num-bigint-dig v0.8.6
+[1m[92m   Compiling[0m crc32fast v1.5.0
+[1m[92m   Compiling[0m cipher v0.4.4
+[1m[92m   Compiling[0m rustls-native-certs v0.7.3
+[1m[92m   Compiling[0m chrono v0.4.45
+[1m[92m   Compiling[0m reqwest v0.12.28
+[1m[92m   Compiling[0m rand_distr v0.5.1
+[1m[92m   Compiling[0m librespot-protocol v0.8.0
+[1m[92m   Compiling[0m tokio-rustls v0.25.0
+[1m[92m   Compiling[0m pkcs8 v0.10.2
+[1m[92m   Compiling[0m num-iter v0.1.46
+[1m[92m   Compiling[0m symphonia-utils-xiph v0.5.5
+[1m[92m   Compiling[0m sha2 v0.10.9
+[1m[92m   Compiling[0m serde_path_to_error v0.1.20
+[1m[92m   Compiling[0m objc2-core-foundation v0.3.2
+[1m[92m   Compiling[0m headers-core v0.3.0
+[1m[92m   Compiling[0m foldhash v0.2.0
+[1m[92m   Compiling[0m allocator-api2 v0.2.21
+[1m[92m   Compiling[0m data-encoding v2.11.0
+[1m[92m   Compiling[0m mime v0.3.17
+[1m[92m   Compiling[0m httpdate v1.0.3
+[1m[92m   Compiling[0m simd-adler32 v0.3.10
+[1m[92m   Compiling[0m utf-8 v0.7.6
+[1m[92m   Compiling[0m adler2 v2.0.1
+[1m[92m   Compiling[0m miniz_oxide v0.8.9
+[1m[92m   Compiling[0m tungstenite v0.28.0
+[1m[92m   Compiling[0m headers v0.4.1
+[1m[92m   Compiling[0m hashbrown v0.16.1
+[1m[92m   Compiling[0m objc2-io-kit v0.3.2
+[1m[92m   Compiling[0m oauth2 v5.0.0
+[1m[92m   Compiling[0m parking_lot v0.12.5
+[1m[92m   Compiling[0m pkcs1 v0.7.5
+[1m[92m   Compiling[0m hyper-rustls v0.26.0
+[1m[92m   Compiling[0m librespot-core v0.8.0 (/Users/runner/work/music-player/music-player/native/vendor/librespot-core)
+[1m[92m   Compiling[0m spinning_top v0.3.0
+[1m[92m   Compiling[0m signature v2.2.0
+[1m[92m   Compiling[0m hmac v0.12.1
+[1m[92m   Compiling[0m webpki v0.22.4
+[1m[92m   Compiling[0m open v5.4.0
+[1m[92m   Compiling[0m web-time v1.1.0
+[1m[92m   Compiling[0m nonzero_ext v0.3.0
+[1m[92m   Compiling[0m byteorder v1.5.0
+[1m[92m   Compiling[0m futures-timer v3.0.4
+[1m[92m   Compiling[0m governor v0.10.4
+[1m[92m   Compiling[0m shannon v0.2.0
+[1m[92m   Compiling[0m hyper-proxy2 v0.1.0
+[1m[92m   Compiling[0m librespot-oauth v0.8.0
+[1m[92m   Compiling[0m pbkdf2 v0.12.2
+[1m[92m   Compiling[0m rsa v0.9.10
+[1m[92m   Compiling[0m flate2 v1.1.9
+[1m[92m   Compiling[0m sysinfo v0.36.1
+[1m[92m   Compiling[0m tokio-tungstenite v0.28.0
+[1m[92m   Compiling[0m protobuf-json-mapping v3.7.2
+[1m[92m   Compiling[0m uuid v1.24.0
+[1m[92m   Compiling[0m aes v0.8.4
+[1m[92m   Compiling[0m num-bigint v0.4.8
+[1m[92m   Compiling[0m quick-xml v0.38.4
+[1m[92m   Compiling[0m priority-queue v2.7.0
+[1m[92m   Compiling[0m tokio-stream v0.1.19
+[1m[92m   Compiling[0m num-derive v0.4.2
+[1m[92m   Compiling[0m extended v0.1.0
+[1m[92m   Compiling[0m dasp_sample v0.11.0
+[1m[92m   Compiling[0m ebur128 v0.1.10
+[1m[92m   Compiling[0m dasp_frame v0.11.0
+[1m[92m   Compiling[0m symphonia-format-riff v0.5.5
+[1m[92m   Compiling[0m symphonia-codec-vorbis v0.5.5
+[1m[92m   Compiling[0m symphonia-format-isomp4 v0.5.5
+[1m[92m   Compiling[0m symphonia-format-ogg v0.5.5
+[1m[92m   Compiling[0m symphonia-bundle-flac v0.5.5
+[1m[92m   Compiling[0m ctr v0.9.2
+[1m[92m   Compiling[0m symphonia-bundle-mp3 v0.5.5
+[1m[33mwarning[0m[1m: this lint expectation is unfulfilled[0m
+  [1m[94m--> [0mvendor/librespot-core/src/authentication.rs:69:14
+   [1m[94m|[0m
+[1m[94m69[0m [1m[94m|[0m     #[expect(deprecated)]
+   [1m[94m|[0m              [1m[33m^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: `#[warn(unfulfilled_lint_expectations)]` on by default
+
+[1m[92m   Compiling[0m symphonia-codec-aac v0.5.5
+[1m[92m   Compiling[0m symphonia-codec-pcm v0.5.5
+[1m[92m   Compiling[0m jni-sys-macros v0.4.1
+[1m[92m   Compiling[0m async-trait v0.1.91
+[1m[92m   Compiling[0m jni-sys v0.3.1
+[1m[92m   Compiling[0m utf8parse v0.2.2
+[1m[92m   Compiling[0m anstyle-parse v1.0.0
+[1m[92m   Compiling[0m librespot-metadata v0.8.0
+[1m[92m   Compiling[0m jni-sys v0.4.1
+[1m[92m   Compiling[0m symphonia v0.5.5
+[1m[92m   Compiling[0m librespot-audio v0.8.0
+[1m[33mwarning[0m: `librespot-core` (lib) generated 1 warning
+[1m[92m   Compiling[0m shell-words v1.1.1
+[1m[92m   Compiling[0m anstyle v1.0.14
+[1m[92m   Compiling[0m is_terminal_polyfill v1.70.2
+[1m[92m   Compiling[0m colorchoice v1.0.5
+[1m[92m   Compiling[0m anstyle-query v1.1.5
+[1m[92m   Compiling[0m anstream v1.0.0
+[1m[92m   Compiling[0m librespot-playback v0.8.0 (/Users/runner/work/music-player/music-player/native/vendor/librespot-playback)
+[1m[92m   Compiling[0m combine v4.6.7
+[1m[92m   Compiling[0m env_filter v2.0.0
+[1m[92m   Compiling[0m cesu8 v1.1.0
+[1m[92m   Compiling[0m env_logger v0.11.11
+[1m[92m   Compiling[0m jni v0.21.1
+[1m[92m   Compiling[0m librespot-connect v0.8.0 (/Users/runner/work/music-player/music-player/native/vendor/librespot-connect)
+[1m[33mwarning[0m[1m: missing documentation for a struct field[0m
+   [1m[94m--> [0mvendor/librespot-connect/src/spirc.rs:201:5
+    [1m[94m|[0m
+[1m[94m201[0m [1m[94m|[0m     pub context_uri: String,
+    [1m[94m|[0m     [1m[33m^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+[1m[92mnote[0m: the lint level is defined here
+   [1m[94m--> [0mvendor/librespot-connect/src/lib.rs:1:9
+    [1m[94m|[0m
+[1m[94m  1[0m [1m[94m|[0m #![warn(missing_docs)]
+    [1m[94m|[0m         [1m[92m^^^^^^^^^^^^[0m
+
+[1m[33mwarning[0m[1m: missing documentation for a struct field[0m
+   [1m[94m--> [0mvendor/librespot-connect/src/spirc.rs:202:5
+    [1m[94m|[0m
+[1m[94m202[0m [1m[94m|[0m     pub track_uri: String,
+    [1m[94m|[0m     [1m[33m^^^^^^^^^^^^^^^^^^^^^[0m
+
+[1m[33mwarning[0m[1m: missing documentation for a method[0m
+   [1m[94m--> [0mvendor/librespot-connect/src/spirc.rs:217:5
+    [1m[94m|[0m
+[1m[94m217[0m [1m[94m|[0m     pub fn cluster(&self) -> Option<Cluster> {
+    [1m[94m|[0m     [1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[1m[33mwarning[0m: `librespot-connect` (lib) generated 3 warnings
+[1m[92m   Compiling[0m squarecore v0.1.0 (/Users/runner/work/music-player/music-player/native)
+[1m[33mwarning[0m[1m: value assigned to `sample_rate` is never read[0m
+   [1m[94m--> [0msrc/stream.rs:166:27
+    [1m[94m|[0m
+[1m[94m166[0m [1m[94m|[0m     let mut sample_rate = params.sample_rate.unwrap_or(44_100);
+    [1m[94m|[0m                           [1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1m[33mthis value is reassigned later and never used[0m
+[1m[94m...[0m
+[1m[94m253[0m [1m[94m|[0m         sample_rate = spec.rate;
+    [1m[94m|[0m         [1m[94m-----------------------[0m [1m[94m`sample_rate` is overwritten here before the previous value is read[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: `#[warn(unused_assignments)]` (part of `#[warn(unused)]`) on by default
+
+[1m[33mwarning[0m[1m: variant `Backward` is never constructed[0m
+  [1m[94m--> [0msrc/events.rs:72:5
+   [1m[94m|[0m
+[1m[94m66[0m [1m[94m|[0m pub enum EndReason {
+   [1m[94m|[0m          [1m[94m---------[0m [1m[94mvariant in this enum[0m
+[1m[94m...[0m
+[1m[94m72[0m [1m[94m|[0m     Backward,
+   [1m[94m|[0m     [1m[33m^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: `EndReason` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+   [1m[94m= [0m[1mnote[0m: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+[1m[33mwarning[0m[1m: function `elsewhere_active` is never used[0m
+   [1m[94m--> [0msrc/remote.rs:128:8
+    [1m[94m|[0m
+[1m[94m128[0m [1m[94m|[0m pub fn elsewhere_active() -> bool {
+    [1m[94m|[0m        [1m[33m^^^^^^^^^^^^^^^^[0m
+
+[1m[33mwarning[0m: `squarecore` (lib) generated 3 warnings
+[1m[92m    Finished[0m `release` profile [optimized] target(s) in 3m 12s

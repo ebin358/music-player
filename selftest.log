@@ -1,0 +1,13 @@
+=== errors ===
+
+=== tail ===
+I/Native: loaded /Users/runner/work/music-player/music-player/desktop/build/compose/binaries/main/app/Square.app/Contents/app/resources/libsquarecore.dylib
+PASS native engine: loaded
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+PASS youtube music search: 20 songs, first: One More Time (Radio Edit) — Daft Punk (wU26xVT_vBU)
+PASS stream url: SKIPPED: YouTube refuses this machine's IP address (YouTube probably temporarily blocked anonymous watch access )
+[INFO  symphonia_format_isomp4::demuxer] stream is seekable with len=38949 bytes.
+PASS decode: 6.1 s of audio at 44100 Hz × 2 from test file, position 6060 ms
+PASS audio device: 44.1 kHz stereo line opens
