@@ -77,7 +77,7 @@ object SpotifyMusic {
     /** Starts the engine with the stored sign-in; quietly does nothing without one. */
     suspend fun connect(output: DesktopAudioOutput) = withContext(Dispatchers.IO) {
         connectLock.withLock {
-            if (NativeBridge.isConnected()) {
+            if (NativeBridge.isConnected) {
                 _state.value = State.Connected(runCatching { NativeBridge.username() }.getOrDefault(""))
                 return@withLock
             }
@@ -320,7 +320,7 @@ object SpotifyMusic {
     }
 
     private fun requireConnected() {
-        if (!NativeBridge.isConnected()) error("Spotify is not connected")
+        if (!NativeBridge.isConnected) error("Spotify is not connected")
     }
 
     private fun JSONObject.items(section: String): List<JSONObject> =

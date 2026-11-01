@@ -117,7 +117,7 @@ class PlayerController(val output: DesktopAudioOutput) {
         val track = current.value ?: return
         when (mode) {
             Source.SPOTIFY -> {
-                if (!NativeBridge.isConnected()) return startCurrent(_position.value)
+                if (!NativeBridge.isConnected) return startCurrent(_position.value)
                 runCatching { if (_playing.value) NativeBridge.pause() else NativeBridge.play() }
                     .onFailure { startCurrent(_position.value) }
                 _playing.value = !_playing.value
@@ -270,8 +270,8 @@ class PlayerController(val output: DesktopAudioOutput) {
                 if (mode != Source.SPOTIFY) runCatching { StreamBridge.stop() }
                 mode = Source.SPOTIFY
                 loadJob = scope.launch(Dispatchers.IO) {
-                    if (!NativeBridge.isConnected()) SpotifyMusic.connect(output)
-                    if (!NativeBridge.isConnected()) {
+                    if (!NativeBridge.isConnected) SpotifyMusic.connect(output)
+                    if (!NativeBridge.isConnected) {
                         fail(gen, "Sign in to Spotify in Settings to play this song.", skip = false)
                         return@launch
                     }
