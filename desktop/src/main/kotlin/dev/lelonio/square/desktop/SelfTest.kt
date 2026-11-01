@@ -61,16 +61,24 @@ object SelfTest {
             "${found.size} songs, first: ${song!!.title} — ${song!!.artists.joinToString { it.name }} (${song!!.id})"
         } && step("stream url") {
             NewPipeDownloader.ensure()
-            val info = StreamInfo.getInfo(ServiceList.YouTube, "https://www.youtube.com/watch?v=${song!!.id}")
-            val stream = info.audioStreams
-                .filter { !it.content.isNullOrEmpty() && it.format == MediaFormat.M4A }
-                .maxByOrNull { it.averageBitrate }
-                ?: error("no M4A among ${info.audioStreams.map { it.format }}")
-            url = stream.content
-            "M4A ${stream.averageBitrate} kbps"
+            try {
+                val info = StreamInfo.getInfo(ServiceList.YouTube, "https://www.youtube.com/watch?v=${song!!.id}")
+                val stream = info.audioStreams
+                    .filter { !it.content.isNullOrEmpty() && it.format == MediaFormat.M4A }
+                    .maxByOrNull { it.averageBitrate }
+                    ?: error("no M4A among ${info.audioStreams.map { it.format }}")
+                url = stream.content
+                "M4A ${stream.averageBitrate} kbps"
+            } catch (blocked: org.schabi.newpipe.extractor.exceptions.SignInConfirmNotBotException) {
+                // YouTube asks datacenter addresses (CI runners) to sign in; a
+                // home connection is not asked. Not a failure of the app.
+                "SKIPPED: YouTube refuses this machine's IP address (${blocked.message?.take(60)})"
+            }
         } && step("decode") {
+            val testFile = System.getenv("SQUARE_TEST_FILE")?.takeIf { java.io.File(it).isFile }
+            val source = url ?: testFile ?: error("no stream and no SQUARE_TEST_FILE to decode")
             val output = CountingOutput()
-            StreamBridge.play(url!!, 30_000, output)
+            StreamBridge.play(source, if (url != null) 30_000 else 0, output)
             val deadline = System.currentTimeMillis() + 30_000
             while (System.currentTimeMillis() < deadline &&
                 StreamBridge.state < StreamBridge.ENDED &&
@@ -81,8 +89,9 @@ object SelfTest {
             StreamBridge.stop()
             if (state == StreamBridge.FAILED) error("decoder failed: ${StreamBridge.error}")
             if (output.rate == 0) error("no audio in 30 s (state $state)")
-            "%.1f s of audio at %d Hz × %d from 0:30, position %d ms".format(
-                output.bytes / (output.rate * output.channels * 2.0), output.rate, output.channels, position,
+            "%.1f s of audio at %d Hz × %d from %s, position %d ms".format(
+                output.bytes / (output.rate * output.channels * 2.0), output.rate, output.channels,
+                if (url != null) "YouTube at 0:30" else "test file", position,
             )
         } && step("audio device") {
             val format = javax.sound.sampled.AudioFormat(44_100f, 16, 2, true, false)

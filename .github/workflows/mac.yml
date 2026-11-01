@@ -69,7 +69,10 @@ jobs:
           set -o pipefail
           APP=$(find desktop/build/compose/binaries -name 'Square.app' -maxdepth 4 | head -1)
           echo "app: $APP"
-          "$APP/Contents/MacOS/Square" --selftest 2>&1 | tee selftest.log
+          # An AAC file made by macOS itself, for when YouTube will not stream to a CI address.
+          say -o "$RUNNER_TEMP/t.aiff" "Square for Mac self test. One, two, three, four, five."
+          afconvert -f m4af -d aac -b 128000 "$RUNNER_TEMP/t.aiff" "$RUNNER_TEMP/t.m4a"
+          SQUARE_TEST_FILE="$RUNNER_TEMP/t.m4a" "$APP/Contents/MacOS/Square" --selftest 2>&1 | tee selftest.log
 
       - name: Publish the .dmg
         id: publish
